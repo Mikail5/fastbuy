@@ -1,0 +1,62 @@
+header .logofast{
+	background: linear-gradient(#F2F232,#F2CC32);
+ 	-webkit-background-clip: text;
+ 	color: transparent;
+ 	width: 160px;
+ 	border-top: 2px solid #F2F232;
+ 	border-right: 2px solid #F2F232;
+ 	border-bottom-right-radius: 60%;
+ 	border-top-right-radius: 60%;
+ 	border-top-left-radius: 50%;
+ 	text-align: center;
+ 	margin: 0;
+ 	margin: 8px 10px;
+ 	float: left;
+  	font-family: "Tw Cen MT";
+  	font-size: 2rem;
+}
+
+.logobtp{
+  background: linear-gradient(#F2F232,#F2CC32);
+ 	-webkit-background-clip: text;
+ 	color: transparent;
+ 	width: 160px;
+ 	border-top: 2px solid #F2F232;
+ 	border-right: 2px solid #F2F232;
+ 	border-bottom-right-radius: 60%;
+ 	border-top-right-radius: 60%;
+ 	border-top-left-radius: 50%;
+ 	text-align: center;
+ 	margin: 0;
+  font-family: "Tw Cen MT";
+  font-size: 22pt;
+  font-weight: bold;
+}
+
+footer{
+	background: #253833;
+	padding: 1%;
+}
+
+footer p{
+	text-align: center;
+	color: #FAFAFA;
+}
+
+.conpro{
+	width: 100%;
+	display: grid;
+	grid-template-columns: repeat(3,1fr);
+}
+
+@media(max-width: 1024px){
+	.conpro{
+		grid-template-columns: repeat(2,1fr);
+	}
+}
+
+@media(max-width: 720px){
+	.conpro{
+		grid-template-columns: repeat(1,1fr);
+	}
+}

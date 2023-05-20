@@ -1,0 +1,542 @@
+body{
+	padding: 0;
+	margin: 0;
+	font-family: "Tw Cen MT";
+}
+
+header{
+	position: fixed;
+	z-index: 50;
+	top: 0;
+	left: 0;
+	background: #3498DB;
+	width: 100%;
+	height: 50px;
+}
+
+header form{
+	height: 50px;
+	display: flex;
+	flex-direction: row;
+	float: right;
+	margin-right: 15px;
+}
+
+.busca{
+	border: 2px solid #E74C3C;
+	margin: 10px 0;
+	margin-right: -5px;
+	padding: 0 2%;
+	font-size: 17px;
+	outline-color: #E91E63;
+}
+
+.botbus{
+	background: linear-gradient(90deg, #E74C3C,#4A235A);
+	color: #FFFFFF;
+	border: none;
+	margin: 10px 0;
+	margin-right: 2%;
+	padding: 5px 8px;
+	font-family: "Tw Cen MT";
+	font-size: 20px;
+	outline: none;
+}
+
+header label{
+	padding: 15px 10px;
+	color: #FFFFFF;
+	font-size: 20px;
+	transition: all 0.2s;
+}
+
+header label:hover{
+	background: rgba(0,0,0, 0.5);
+	border-top: 2px solid #FF5733;
+	cursor: pointer;
+}
+
+#dmenu{
+	display: none;
+}
+
+#botmenu{
+	display: none;
+}
+/***************************slider****************************/
+.slider{
+	position: relative;
+	margin-top: 50px;
+	background: #FAFAFA;
+	width: 100%;
+	height: 92vh;
+}
+
+.conima{
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	visibility: hidden;
+	opacity: 0;
+	transition: all 0.5s;
+}
+
+.conima img{
+	height: 100%;
+	width: 100%;
+}
+
+#i1, #i2, #i3{
+	display: none;
+}
+
+.sig, .ant{
+	position: absolute;
+	width: 10%;
+	height: 100%;
+	top: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+}
+
+.sig{
+	right: 0;
+}
+
+.sig:hover{
+	background: rgba(225, 215, 215, 0.6);
+}
+
+.ant{
+	left: 0;
+}
+
+.ant:hover{
+	background: rgba(225, 215, 215, 0.6);
+}
+
+.sig img{
+	height: auto;
+	width: 50%;
+}
+
+.ant img{
+	height: auto;
+	width: 50%;
+}
+
+.botones{
+	position: absolute;
+	height: 15px;
+	width: 100%;
+	bottom: 5%;
+	text-align: center;
+}
+
+.botc{
+	position: relative;
+	height: 10px;
+	width: 10px;
+	margin: 0 5px;
+	border-radius: 50%;
+	display: inline-block;
+	background: rgba(0, 0, 0, 0.5);
+	border: 2px solid #FAFAFA;
+	cursor: pointer;
+}
+
+#i1:checked ~ #uno,
+#i2:checked ~ #dos,
+#i3:checked ~ #tres{
+	visibility: visible;
+	opacity: 1;
+}
+
+#i1:checked ~ .botones #bot1{
+	background: rgba(255, 255, 255, 0.8);
+	border: 2px solid #000000;
+}
+#i2:checked ~ .botones #bot2{
+	background: rgba(255, 255, 255, 0.8);
+	border: 2px solid #000000;
+}
+#i3:checked ~ .botones #bot3{
+	background: rgba(255, 255, 255, 0.8);
+	border: 2px solid #000000;
+}
+/*************************************************************/
+.contpad{
+	width: 100%;
+	height: auto;
+	display: flex;
+	justify-content: flex-start;
+}
+
+.contpad nav{
+	background: #E5E8E8;
+	width: 30%;
+	height: auto;
+	display: flex;
+	flex-direction: column;
+}
+
+.contpad nav a{
+	width: 100%;
+	padding: 3% 5%;
+	box-sizing: border-box;
+	border-bottom: 1px solid #999999;
+	font-size: 20px;
+	text-decoration: none;
+	color: #253833;
+}
+
+.contpad nav a:hover{
+	background: -webkit-linear-gradient(#F2F4F4,#CCD1D1);
+	cursor: pointer;
+}
+
+.conarti{
+	width: 70%;
+	height: auto;
+	padding: 1%;
+	box-sizing: border-box;
+}
+
+.arti{
+	height: auto;
+	width: 100%;
+}
+
+.arti h2{
+	color: #006064;
+	text-align: center;
+}
+
+.conind{
+	width: 100%;
+	height: auto;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+}
+
+.artind{
+	width: 95%;
+	height: auto;
+	border: 2px solid #C5C5C5;
+	border-radius: 5px;
+	padding: 14px;
+	display: flex;
+	flex-direction: column;
+	transition: all 0.2s;
+	margin: 10px 0;
+	box-sizing: border-box;
+}
+
+.dimimg{
+	width: 60%;
+	height: auto;
+	align-self: center;
+	margin: 20px 0 0;
+}
+
+.nombre{
+	font-size: 25px;
+	text-align: center;
+	font-weight: bold;
+}
+
+.precio{
+	font-size: 22px;
+	text-align: center;
+	margin: 0;
+}
+
+.botview{
+	background: #E51E1E;
+	border: 2px solid #E51E1E;
+	padding: 10px;
+	text-decoration: none;
+	text-align: center;
+	font-size: 20px;
+	margin: 15px 0 0;
+	width: 50%;
+	color: #FFFFFF;
+	align-self: center;
+	transition: all 0.2s;
+}
+
+.botview:hover{
+	background: #E24F4F;
+	border: 2px solid #E24F4F;
+	text-decoration: none;
+	color: #FFFFFF;
+}
+
+.artind:hover{
+	background: #16A085;
+	border: 2px solid #16A085;
+	border-radius: 0;
+	color: #FFFFFF;
+}
+
+.botview:active{
+	border: 2px solid #E51E1E;
+}
+
+.conarti input[type="radio"]{
+	display: none;
+}
+
+.conarti input[type="radio"]:checked ~ .arti{
+	display: block;
+}
+/*====================formularios=======================*/
+.sombrais{
+  background: rgba(0,0,0,0.5);
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  animation: modal 2s;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.2s;
+  z-index: 100;
+}
+
+#cuad1{
+	background: #D6481C;
+	width: 350px;
+	height: auto;
+	margin: auto;
+	transition: all 0.3s;
+	border-radius: 8px;
+	display: flex;
+	flex-direction: column;
+}
+
+.cabis{
+  background: #FFFFFF;
+  height: 50px;
+  width: 100%;
+  display: flex;
+  border-top-right-radius: 8px;
+  border-top-left-radius: 8px;
+}
+
+.titul{
+	margin: 10px 0;
+	margin-left: 20px;
+	width: 90%;
+	color: #D6481C;
+}
+
+#back{
+  background: #D6481C;
+  border-radius: 50%;
+  height: 25px;
+  width: 26px;
+  font-size: 14pt;
+  text-align: center;
+  color: #FFF;
+  line-height: 25px;
+  margin: 10px;
+  transition: all 0.2s;
+}
+
+#back:hover{
+  background: #FF0000;
+  cursor: pointer;
+}
+
+#exeis{
+  display: none;
+}
+
+#exeis:checked ~ .sombrais{
+	visibility: visible;
+	opacity: 1;
+}
+
+.min{
+	font-size: 18px;
+	color: #FFFFFF;
+	margin: 2% 18% 0%;
+}
+
+.campos{
+	margin: 0% 18% 2%;
+	border-radius: 8px;
+	font-size: 15px;
+	outline: none;
+	padding: 1% 2%;
+	border: 2px solid #FFFFFF;
+}
+
+.boting{
+	background: #AF3B16;
+	padding: 10px;
+	border: 2px solid #AF3B16;
+	font-family: "Tw Cen MT";
+	font-size: 20px;
+	color: #FFFFFF;
+	width: 140px;
+	align-self: flex-end;
+	margin: 18px 0;
+	margin-right: 18%;
+	transition: all 0.2s;
+	outline: none;
+}
+
+.boting:hover{
+	background: #FAFAFA;
+	border: 2px outset #AF3B16;
+	color: #AF3B16;
+	cursor: pointer;
+}
+
+.boting:active{
+	border: 2px inset #AF3B16;
+}
+/*===================registro=====================*/
+.sombrareg{
+  background: rgba(0,0,0,0.5);
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  animation: modal 2s;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.2s;
+  z-index: 100;
+}
+
+#exereg{
+	display: none;
+}
+
+#exereg:checked ~ .sombrareg{
+	visibility: visible;
+	opacity: 1;
+}
+
+#cuad2{
+	background: #7CB342;
+	width: 350px;
+	height: auto;
+	margin: auto;
+	transition: all 0.3s;
+	border-radius: 8px;
+	display: flex;
+	flex-direction: column;
+}
+
+.titulr{
+	margin: 10px 0;
+	margin-left: 20px;
+	width: 90%;
+	color: #8BC34A;
+}
+
+#backr{
+  background: #8BC34A;
+  border-radius: 50%;
+  height: 25px;
+  width: 26px;
+  font-size: 14pt;
+  text-align: center;
+  color: #FFF;
+  line-height: 25px;
+  margin: 10px;
+  transition: all 0.2s;
+}
+
+#backr:hover{
+  background: #FF0000;
+  cursor: pointer;
+}
+
+.botreg{
+	background: #558B2F;
+	padding: 10px;
+	border: 2px solid #558B2F;
+	font-family: "Tw Cen MT";
+	font-size: 20px;
+	color: #FFFFFF;
+	width: 140px;
+	align-self: flex-end;
+	margin: 18px 0;
+	margin-right: 18%;
+	transition: all 0.2s;
+	outline: none;
+}
+
+.botreg:hover{
+	background: #FAFAFA;
+	border: 2px outset #558B2F;
+	color: #558B2F;
+	cursor: pointer;
+}
+
+.botreg:active{
+	border: 2px inset #558B2F;
+}
+/*======================================================*/
+@media(max-width: 1050px){
+	.conind{
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+@media(max-width: 710px){
+	.conind{
+		grid-template-columns: repeat(1, 1fr);
+	}
+}
+
+@media(max-width: 690px){
+	header form{
+		height: 42px;
+		width: 100%;
+		margin: 0;
+		margin-top: 11px;
+		display: flex;
+		float: none;
+	}
+	header {
+		height: auto;
+	}
+	.slider{
+		margin-top: 94px;
+	}
+	header label{
+		padding: 10px;
+	}
+	.busca{
+		margin: 0;
+		margin-left: 10px;
+		margin-right: -5px;
+		padding: 4px 10px;
+		width: 40%;
+	}
+	.botbus{
+		margin: 0;
+		padding: 4px 8px;
+		margin-right: 10px;
+	}
+	.conarti{
+		width: 58%;
+		left: 40%;
+	}
+	.contpad nav{
+		width: 40%;
+	}
+}
